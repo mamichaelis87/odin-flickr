@@ -1,0 +1,14 @@
+<h1>Boring Flickr API project</h1>
+<%= form_with url: "static_pages/index", method: :get do |form| %>
+  <%= form.label :flickr_id, "Enter an ID:" %>
+  <%= form.text_field :flickr_id %>
+  <%= form.submit "Submit" %>
+<% end %>
+
+<%= unless params.empty? %>
+  <%= @photos.each do |photo| %>
+  <div>
+    <%= photo %>
+  </div>
+<% end %>
+
