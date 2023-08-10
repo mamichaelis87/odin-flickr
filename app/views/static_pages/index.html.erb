@@ -8,7 +8,7 @@
 <% if @photos %>
   <% @photos.each do |photo| %>
   <div>
-    <%= image_tag("https://live.staticflickr.com/#{photo[:server]}/#{photo[:id]}_#{photo[:secret]}.jpg") %>
+    <%= image_tag("https://live.staticflickr.com/#{photo["server"]}/#{photo["id"]}_#{photo["secret"]}.jpg") %>
   </div>
   <% end %>
 <% end %>
